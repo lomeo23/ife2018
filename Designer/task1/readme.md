@@ -8,7 +8,6 @@
 >笔记
 
 + 通过 div.style.color="red" 类似形式添加的内联样式，需要使用div.removeAttribute("style") 移除
-
 + 还可以使用Linear Gradients来实现
 
 >不足
