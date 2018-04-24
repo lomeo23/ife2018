@@ -3,7 +3,7 @@
 >思路
 
 + 使用Transition
-    通过通过js添加类名来实现transition动画
+    通过js添加style属性，来实现动画效果
 
 >笔记
 
