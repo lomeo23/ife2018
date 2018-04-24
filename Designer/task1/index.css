@@ -1,0 +1,36 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content .title {
+    padding: 10px;
+    margin-bottom: 0;
+    transition: 1s cubic-bezier(.21,.89,.2,.9);
+}
+
+.content hr {
+    margin: 0;
+    height: 4px;
+    background: #1749ee;
+    border: none;
+    width: 0;
+    transition: 1s cubic-bezier(.21,.89,.2,.9);
+}
+
+.content .button {
+    margin-top: 20px;
+    padding: 5px 20px;
+    background: #fff;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    box-shadow: 0 0 2px #888;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.content .button:active {
+    background: #ccc;
+}

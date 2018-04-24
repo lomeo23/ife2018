@@ -2,4 +2,9 @@
 
 >思路
 
-+ 使用transition
++ 使用Transition
+    通过通过js添加类名来实现transition动画
+
+>笔记
+
++ 通过 div.style.color="red" 类似形式添加的内联样式，需要使用div.removeAttribute("style") 移除
