@@ -1,13 +1,27 @@
-const webpack = require('webpack');
-const merge = require('webpack-merge');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const common = require('./webpack.common.js');
+const path = require('path')
+const webpack = require('webpack')
+const utils = require('./utils')
+const config = require('../config')
+const merge = require('webpack-merge')
+const common = require('./webpack.common')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+
+const env = require('../config/prod.env')
 
 module.exports = merge(common, {
-    devtool: 'source-map',
+    mode: 'production',
     plugins: [
-        new UglifyJSPlugin({
-            ourceMap: true
-        })
+        new HtmlWebpackPlugin({
+            filename: config.build.index,
+            template: 'index.html',
+            inject: true,
+            minify: {
+                removeComments: true,
+                collapseWhitespace: true,
+                removeAttributeQuotes: true
+            },
+            chunksSortMode: 'dependency'
+        }),
     ]
 });

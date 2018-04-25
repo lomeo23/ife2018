@@ -7,6 +7,7 @@
 npm install -g webpack          #全局安装webpack
 npm init -y                     #初始化
 npm install --save-dev webpack  #安装webpack包
+npm install webpack-cli -D      #安装webpack-cli
 ```
 
 + 添加examples和dist文件夹来区分生产和开发模式
@@ -17,7 +18,7 @@ npm install --save-dev webpack  #安装webpack包
 ```
 npm install --save-dev style-loader css-loader
 npm install --save-dev url-loader
-npm install --save-dev babel-loader@8.0.0-beta.0 @babel/core @babel/preset-env webpack
+npm install --save-dev babel-loader @babel/core @babel/preset-env webpack
 npm install --save-dev clean-webpack-plugin
 npm install --save-dev webpack-dev-server
 npm install --save-dev webpack-merge
