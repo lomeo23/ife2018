@@ -1,6 +1,6 @@
 # 1.2 用webpack4 / parcel快速搭建开发san helloworld
 
-###搭建过程
+## 搭建过程
 
 > 基础配置
 ```
