@@ -5,38 +5,23 @@
 > 基础配置
 ```
 npm install -g webpack          #全局安装webpack
-npm init                        #初始化
+npm init -y                     #初始化
 npm install --save-dev webpack  #安装webpack包
 ```
 
-+ 添加dist和examples文件夹来区分生产和开发模式
++ 添加examples和dist文件夹来区分生产和开发模式
 + 添加config文件夹和build文件夹
-+ 根目录下添加index.html,examples下添加index.js入口文件
++ examples下添加main.js入口文件
 
-> examples/index.js
+> 安装其他包
 ```
-function component() {
-  var element = document.createElement('div');
-
-  // Lodash（目前通过一个 script 脚本引入）对于执行这一行是必需的
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-  return element;
-}
-
-document.body.appendChild(component());
+npm install --save-dev style-loader css-loader
+npm install --save-dev url-loader
+npm install --save-dev babel-loader@8.0.0-beta.0 @babel/core @babel/preset-env webpack
+npm install --save-dev clean-webpack-plugin
+npm install --save-dev webpack-dev-server
+npm install --save-dev webpack-merge
+npm install --save-dev html-webpack-plugin
+npm install --save-dev uglifyjs-webpack-plugin
 ```
 
-> index.html
-```
-<!doctype html>
-<html>
-  <head>
-    <title>Getting Started</title>
-    <script src="https://unpkg.com/lodash@4.16.6"></script>
-  </head>
-  <body>
-    <script src="./src/index.js"></script>
-  </body>
-</html>
-```
