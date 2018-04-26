@@ -1,6 +1,17 @@
-require.config({
-    packages: [{
-        name: 'san',
-        location: 'san-path/dist/san'
-    }]
+import san from 'san'
+
+const MyApp = san.defineComponent({
+    template: `
+        <div id="app">
+            <input type="text" value="{=name=}">
+            <p>Hello {{name}}!</p>
+        </div>
+    `
 });
+
+let myApp = new MyApp({
+    data: {
+        name: 'San'
+    }
+});
+myApp.attach(document.body);

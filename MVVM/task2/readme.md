@@ -26,3 +26,7 @@ npm install --save-dev html-webpack-plugin
 npm install --save-dev uglifyjs-webpack-plugin
 ```
 
+>遇到的问题
+
++ 初次运行的时候，会执行两次入口文件的内容
+

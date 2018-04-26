@@ -10,7 +10,6 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const env = require('../config/prod.env')
 
 module.exports = merge(common, {
-    mode: 'production',
     plugins: [
         new HtmlWebpackPlugin({
             filename: config.build.index,
@@ -21,7 +20,13 @@ module.exports = merge(common, {
                 collapseWhitespace: true,
                 removeAttributeQuotes: true
             },
-            chunksSortMode: 'dependency'
+            chunksSortMode: 'dependency',
         }),
+        new UglifyJSPlugin({
+            sourceMap: true
+        }),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('production')
+        })
     ]
 });
